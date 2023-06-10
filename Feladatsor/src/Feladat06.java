@@ -5,7 +5,7 @@ public class Feladat06 {/* Returns the number of those that are divisible by fiv
                             Returns the number of those that are greater than 7 and smaller than 11
                             Returns the number of those that are primes
                             Returns if there are more than 2 primes in the given numbers
-                            Returns if there are at least 4 numbers there that are divisible by 4 
+                            Returns if there are at least 4 numbers there that are divisible by 4
 */
 
     public static void main(String[] args) {
