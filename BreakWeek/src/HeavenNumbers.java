@@ -11,14 +11,15 @@ public class HeavenNumbers {
             isHeavenly = true;
         } else {
             if (userNumber > 300 && userNumber % 13 == 0) {
-                byte numberOfDivisor = 2;
+                byte numberOfDivisor = 2; // any number, but one, always can be divided by one and itself
                 int i = 2;
-                while (numberOfDivisor < 9 && i <= (userNumber / 2)) {
+                while (numberOfDivisor < 9 && i <= (Math.sqrt(userNumber))) {
 
                     if (userNumber % i == 0) {
-                        //System.out.println(i);
-                        numberOfDivisor++;
-                        if (numberOfDivisor == 9) {
+                        System.out.println(i + " * " + userNumber/i);
+                        System.out.println(numberOfDivisor);
+                        numberOfDivisor += 2; //when you found a divisor there was definitely an other dealer
+                        if (numberOfDivisor >= 9) {
                             isHeavenly = true;
                         }
                     }
