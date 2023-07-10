@@ -8,13 +8,11 @@ public class SquareListener {
         int userNumber = scanUserNumber();
         //2. define the limit
         int limit = (int) Math.sqrt(userNumber);
+        System.out.println("limit: " + limit);
         //3. square listener
-        int[] squareList = makeSqrList(limit);
+        ArrayList<Integer> squareList = makeSqrList(limit);
         //4. print
-        for (int sqr : squareList
-        ) {
-            System.out.print(sqr + ", ");
-        }
+            System.out.print(squareList);
 
     }
 
@@ -25,10 +23,10 @@ public class SquareListener {
         return number;
     }
 
-    static int[] makeSqrList(int limit) {
-        int[] sqrList = new int[limit];
+    static ArrayList<Integer> makeSqrList(int limit) {
+        ArrayList<Integer> sqrList = new ArrayList<>();
         for (int i = 0; i < limit; i++) {
-            sqrList[i] = ((i + 1) * (i + 1));
+            sqrList.add((i + 1) * (i + 1));
         }
         return sqrList;
     }
