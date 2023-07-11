@@ -7,6 +7,8 @@ import java.util.List;
 public class PrimeProductTest {
     @Test
     void testPrimeProduct() {
+        Assertions.assertEquals(List.of(2), PrimeProduct.getLimit(4));
+        Assertions.assertEquals(List.of(2, 3), PrimeProduct.getLimit(9));
         Assertions.assertEquals(List.of(2, 3), PrimeProduct.getLimit(10));
         Assertions.assertEquals(List.of(2, 3, 5), PrimeProduct.getLimit(25));
         Assertions.assertEquals(List.of(2, 3), PrimeProduct.getLimit(14));
@@ -15,6 +17,8 @@ public class PrimeProductTest {
 
     @Test
     void testPrimeFactors() {
+        Assertions.assertEquals(List.of(5, 5), PrimeProduct.getPrimeFactors(25));
+        Assertions.assertEquals(List.of(7, 7), PrimeProduct.getPrimeFactors(49));
         Assertions.assertEquals(List.of(2, 7), PrimeProduct.getPrimeFactors(14));
         Assertions.assertEquals(List.of(2, 13), PrimeProduct.getPrimeFactors(26));
         Assertions.assertEquals(List.of(2, 2, 3), PrimeProduct.getPrimeFactors(12));
