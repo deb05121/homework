@@ -6,10 +6,18 @@ public class TipCalculator {
 
         System.out.println("Type prices or zero if it isn't any more.");
         ArrayList<Integer> priceList = getPrices();
+        int[] prices = new int[priceList.size()];
+        for (int i = 0; i < priceList.size(); i++) {
+            prices[i] = priceList.get(i);
+        }
         System.out.println("Type percent of tip between 10 and 80!");
         int tipPercent = getTip();
-        double amount = calculateTip(priceList, tipPercent);
-        System.out.println(amount);
+        if (tipPercent == -1) {
+            System.out.println(tipPercent);
+        } else {
+            double amount = calculateTip(prices, tipPercent);
+            System.out.println(amount);
+        }
     }
 
     static int getTip() {
@@ -17,7 +25,7 @@ public class TipCalculator {
         Scanner scan = new Scanner(System.in);
         do {
             int tip = scan.nextInt();
-            if (tip > 10 && tip < 80) {
+            if (tip >= 10 && tip <= 80) {
                 tipPercent = tip;
             } else {
                 tipPercent = -1;
@@ -41,19 +49,15 @@ public class TipCalculator {
         return priceList;
     }
 
-    static double calculateTip(ArrayList<Integer> priceList, int tipPercent) {
+    static double calculateTip(int[] prices, int tipPercent) {
         double amount = 0;
-        for (int i = 0; i < priceList.size(); i++) {
-            amount += priceList.get(i);
+        for (int i = 0; i < prices.length; i++) {
+            amount += prices[i];
         }
-        if (tipPercent == -1) {
-            amount = -1;
-        } else {
-            amount *= (double) tipPercent / 100;
-        }
+        amount *= (double) tipPercent / 100;
+
         return amount;
     }
-
 
 
 }

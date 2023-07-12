@@ -4,12 +4,13 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class TipCalculatorTest {
-    @ParameterizedTest
-    @ValueSource
+    @Test
+
     void tipCalculatorTest() {
-        Assertions.assertEquals(-1, TipCalculator.calculateTip();
+        //Assertions.assertArrayEquals(TipCalculator.calculateTip(int[] (100,100,100), 5));
     }
 
 
