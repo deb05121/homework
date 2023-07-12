@@ -1,15 +1,14 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class SquareListener {
+public class SquareLister {
     public static void main(String[] args) {
         //1. Scanner
         int userNumber = scanUserNumber();
         //2. define the limit
         int limit = (int) Math.sqrt(userNumber);
         System.out.println("limit: " + limit);
-        //3. square listener
+        //3. square lister
         ArrayList<Integer> squareList = makeSqrList(limit);
         //4. print
             System.out.print(squareList);
@@ -20,6 +19,7 @@ public class SquareListener {
         Scanner scan = new Scanner(System.in);
         System.out.println("Type a number: ");
         int number = scan.nextInt();
+        scan.close();
         return number;
     }
 

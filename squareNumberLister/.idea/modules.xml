@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/squareNumberListener.iml" filepath="$PROJECT_DIR$/squareNumberListener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/squareNumberLister.iml" filepath="$PROJECT_DIR$/squareNumberLister.iml" />
     </modules>
   </component>
 </project>
