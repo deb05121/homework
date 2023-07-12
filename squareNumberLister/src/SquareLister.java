@@ -11,7 +11,7 @@ public class SquareLister {
         //3. square lister
         ArrayList<Integer> squareList = makeSqrList(limit);
         //4. print
-            System.out.print(squareList);
+        System.out.print(squareList);
 
     }
 
