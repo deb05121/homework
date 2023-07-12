@@ -18,7 +18,7 @@ public class NumberConverter {
     private static final String HUNDRED = "hundred";
     private static final String HYPHEN = "-";
 
-    private static final String[] THOUSANDS = {"", "thousand", "million", "billion"};
+    private static final String[] THOUSANDS = {"", "thousand", "million", "billion", "trillion"};
 
     // nine hundred ninety-nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class NumberConverter {
         System.out.println("Please give a number");
         long userNumber = scanner.nextLong();
         long number = userNumber;
-        int[] groups = new int[4];
+        int[] groups = new int[5];
         int i = 0;
         String numberInEnglish = "";
         while (number > 0) {
