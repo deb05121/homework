@@ -10,7 +10,8 @@ public class TipCalculatorTest {
     @Test
 
     void tipCalculatorTest() {
-        //Assertions.assertArrayEquals(TipCalculator.calculateTip(int[] (100,100,100), 5));
+        
+        Assertions.assertEquals(100, TipCalculator.calculateTip(new int[]{100, 100, 200}, 25));
     }
 
 
