@@ -14,7 +14,16 @@ public class Calculator {
         System.out.println("9 - Square root");
 
         Scanner scanner = new Scanner(System.in);
-        int number = getNumber(scanner);
+        boolean isNotValidNumber = true;
+        byte number;
+        do {
+            number = getNumber(scanner);
+            if (number > 0 && number < 10) {
+                isNotValidNumber = false;
+            } else {
+                System.out.println("Not valid number! Try again!");
+            }
+        } while (isNotValidNumber);
         switch (number) {
             case 1:
                 performAddition(scanner);
@@ -51,10 +60,10 @@ public class Calculator {
     static void performSquareRoot(Scanner scanner) {
         System.out.println("Please type a number");
         int num = scanner.nextInt();
-        System.out.println(SquareRoot(num));
+        System.out.println(squareRoot(num));
     }
 
-    static double SquareRoot(int num) {
+    static double squareRoot(int num) {
         return Math.sqrt(num);
     }
 
@@ -63,11 +72,11 @@ public class Calculator {
         int num1 = scanner.nextInt();
         System.out.println("Please type the percentage (%)");
         int num2 = scanner.nextInt();
-        System.out.println(Percentage(num1, num2));
+        System.out.println(percentage(num1, num2));
     }
 
-    static double Percentage(int num1, int num2) {
-        return num1*(num2/100.0);
+    static double percentage(int num1, int num2) {
+        return num1 * (num2 / 100.0);
     }
 
     static void performPower(Scanner scanner) {
@@ -75,13 +84,21 @@ public class Calculator {
         int num1 = scanner.nextInt();
         System.out.println("Please type a second number");
         int num2 = scanner.nextInt();
-        System.out.println(Power(num1, num2));
+        System.out.println(power(num1, num2));
     }
 
-    static long Power(int num1, int num2) {
-        long pow = 1;
-        for (int i = 0; i < num2; i++) {
-            pow *= num1;
+    static double power(int ground, int exponent) {
+        double pow = 1;
+        if (exponent == 0) {
+            return pow;
+        }
+
+        for (int i = 0; i < Math.abs(exponent); i++) {
+            pow *= ground;
+        }
+
+        if (exponent < 0) {
+            pow = 1 / pow;
         }
         return pow;
     }
@@ -91,10 +108,10 @@ public class Calculator {
         int num1 = scanner.nextInt();
         System.out.println("Please type a second number");
         int num2 = scanner.nextInt();
-        System.out.println(ModularDivision(num1, num2));
+        System.out.println(modularDivision(num1, num2));
     }
 
-    static int ModularDivision(int num1, int num2) {
+    static int modularDivision(int num1, int num2) {
         return num1 % num2;
     }
 
@@ -103,11 +120,13 @@ public class Calculator {
         int num1 = scanner.nextInt();
         System.out.println("Please type a second number");
         int num2 = scanner.nextInt();
-        System.out.println(Division(num1, num2));
+        System.out.println(division(num1, num2));
     }
 
-    static double Division(int num1, int num2) {
-        return num1 / num2;
+    static double division(int num1, int num2) {
+        double d1 = num1;
+        double d2 = num2;
+        return d1 / d2;
     }
 
     static void performMultiplication(Scanner scanner) {
@@ -115,10 +134,10 @@ public class Calculator {
         int num1 = scanner.nextInt();
         System.out.println("Please type a second number");
         int num2 = scanner.nextInt();
-        System.out.println(Multiplication(num1, num2));
+        System.out.println(multiplication(num1, num2));
     }
 
-    static long Multiplication(int num1, int num2) {
+    static long multiplication(int num1, int num2) {
         return num1 * num2;
     }
 
@@ -162,7 +181,7 @@ public class Calculator {
         return num1 + num2;
     }
 
-    static int getNumber(Scanner scanner) {
-        return scanner.nextInt();
+    static byte getNumber(Scanner scanner) {
+        return scanner.nextByte();
     }
 }
