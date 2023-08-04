@@ -12,6 +12,7 @@ public class TipCalculatorTest {
     void tipCalculatorTest() {
         
         Assertions.assertEquals(100, TipCalculator.calculateTip(new int[]{100, 100, 200}, 25));
+        //Assertions.assertEquals(-1, TipCalculator.getTip());
     }
 
 
