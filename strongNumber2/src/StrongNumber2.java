@@ -6,24 +6,16 @@ public class StrongNumber2 {
         System.out.println("Type a number: ");
         int userNumber = scan.nextInt();
 
-        boolean isStrong = isStrongNumber(userNumber);
-        if(isStrong){
-            System.out.printf("%d is a strong number.",userNumber);
-        }else {
-            System.out.printf("%d isn't a strong number.",userNumber);
-        }
-    }
-
-    static boolean isStrongNumber(int userNumber) {
-        int sumOfFactorial = getDigitFactorialSum(userNumber);
-        if (sumOfFactorial == userNumber) {
-            return true;
+        boolean isStrong = getDigitFactorialSum(userNumber);
+        if (isStrong) {
+            System.out.printf("%d is a strong number.", userNumber);
         } else {
-            return false;
+            System.out.printf("%d isn't a strong number.", userNumber);
         }
     }
 
-    static int getDigitFactorialSum(int userNumber) {
+
+    static boolean getDigitFactorialSum(int userNumber) {
         int sumOfFactorials = 0;
         int checkedNumber = userNumber;
         int len = String.valueOf(userNumber).length();
@@ -34,7 +26,7 @@ public class StrongNumber2 {
             factorial = getFactorial(digit);
             sumOfFactorials += factorial;
         }
-        return sumOfFactorials;
+        return sumOfFactorials == userNumber;
     }
 
 
