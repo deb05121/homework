@@ -5,7 +5,6 @@ public class StrongNumber2 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Type a number: ");
         int userNumber = scan.nextInt();
-
         boolean isStrong = getDigitFactorialSum(userNumber);
         if (isStrong) {
             System.out.printf("%d is a strong number.", userNumber);
@@ -14,13 +13,12 @@ public class StrongNumber2 {
         }
     }
 
-
     static boolean getDigitFactorialSum(int userNumber) {
         int sumOfFactorials = 0;
         int checkedNumber = userNumber;
         int len = String.valueOf(userNumber).length();
         for (int i = 0; i < len; i++) {
-            int factorial = 1;
+            int factorial;
             int digit = checkedNumber % 10;
             checkedNumber /= 10;
             factorial = getFactorial(digit);
@@ -28,7 +26,6 @@ public class StrongNumber2 {
         }
         return sumOfFactorials == userNumber;
     }
-
 
     static int getFactorial(int digit) {
         int actualFactorial = 1;
