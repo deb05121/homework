@@ -5,15 +5,19 @@ public class StrongNumber2 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Type a number: ");
         int userNumber = scan.nextInt();
-        boolean isStrong = getDigitFactorialSum(userNumber);
-        if (isStrong) {
+
+        if (isStrong(userNumber)) {
             System.out.printf("%d is a strong number.", userNumber);
         } else {
             System.out.printf("%d isn't a strong number.", userNumber);
         }
     }
 
-    static boolean getDigitFactorialSum(int userNumber) {
+    static boolean isStrong(int userNumber) {
+        return getDigitFactorialSum(userNumber) == userNumber;
+    }
+
+    static int getDigitFactorialSum(int userNumber) {
         int sumOfFactorials = 0;
         int checkedNumber = userNumber;
         int len = String.valueOf(userNumber).length();
@@ -24,7 +28,7 @@ public class StrongNumber2 {
             factorial = getFactorial(digit);
             sumOfFactorials += factorial;
         }
-        return sumOfFactorials == userNumber;
+        return sumOfFactorials;
     }
 
     static int getFactorial(int digit) {
