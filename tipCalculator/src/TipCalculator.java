@@ -21,24 +21,27 @@ public class TipCalculator {
     }
 
     static int getTip() {
-        int tipPercent = 0;
+        int tipPercent;
         Scanner scan = new Scanner(System.in);
-        do {
-            int tip = scan.nextInt();
-            if (tip >= 10 && tip <= 80) {
-                tipPercent = tip;
-            } else {
-                tipPercent = -1;
-            }
-        } while (tipPercent == 0);
+        int tip = scan.nextInt();
+        tipPercent = checkTip(tip);
+
         scan.close();
         return tipPercent;
+    }
+
+    static int checkTip(int tip) {
+        if (tip >= 10 && tip <= 80) {
+            return tip;
+        } else {
+            return -1;
+        }
     }
 
     static ArrayList<Integer> getPrices() {
         ArrayList<Integer> priceList = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
-        int price = 0;
+        int price;
         do {
             price = scan.nextInt();
             if (price > 0) {
@@ -51,8 +54,8 @@ public class TipCalculator {
 
     static double calculateTip(int[] prices, int tipPercent) {
         double amount = 0;
-        for (int i = 0; i < prices.length; i++) {
-            amount += prices[i];
+        for (int price : prices) {
+            amount += price;
         }
         amount *= (double) tipPercent / 100;
 

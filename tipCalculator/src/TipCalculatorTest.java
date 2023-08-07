@@ -12,7 +12,12 @@ public class TipCalculatorTest {
     void tipCalculatorTest() {
         
         Assertions.assertEquals(100, TipCalculator.calculateTip(new int[]{100, 100, 200}, 25));
-        //Assertions.assertEquals(-1, TipCalculator.getTip());
+
+    }
+    @ParameterizedTest
+    @ValueSource(ints = {3,5,8,82,87,95})
+    void testTipCheck(int number){
+        Assertions.assertEquals(-1,TipCalculator.checkTip(number));
     }
 
 
