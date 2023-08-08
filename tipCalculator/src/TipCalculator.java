@@ -15,8 +15,9 @@ public class TipCalculator {
             } else {
                 prices[i] = priceList.get(i);
             }
-            System.out.print("Tip amount: %.2f" + calculateTip(prices, tip));
         }
+
+        System.out.printf("Tip amount: %.2f%n", calculateTip(prices, tip));
     }
 
     static int checkTip(int tip) {
@@ -28,16 +29,16 @@ public class TipCalculator {
     }
 
     static ArrayList<Integer> getPrices() {
-        ArrayList<Integer> priceList = new ArrayList<>();
+        ArrayList<Integer> priceListPlusTip = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
         int price;
         do {
             price = scan.nextInt();
-            priceList.add(price);
+            priceListPlusTip.add(price);
 
         } while (price > 100);
 
-        return priceList;
+        return priceListPlusTip;
     }
 
     static double calculateTip(int[] prices, int tipPercent) {
