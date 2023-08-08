@@ -21,15 +21,15 @@ public class DiagonalDifferenceTest {
     }
 
     @Test
-    void diagonalDifferentTest(){
-        int[] diagonalA1 = {1,2,3};
-        int[] diagonalB1 = {3,2,1};
+    void diagonalDifferentTest() {
+        int[] diagonalA1 = {1, 2, 3};
+        int[] diagonalB1 = {3, 2, 1};
         Assertions.assertEquals(0, DiagonalDifference.diagonalDifference(diagonalA1, diagonalB1));
-        int[] diagonalA2 = {1,2,3,4};
-        int[] diagonalB2 = {4,3,2,1};
+        int[] diagonalA2 = {1, 2, 3, 4};
+        int[] diagonalB2 = {4, 3, 2, 1};
         Assertions.assertEquals(0, DiagonalDifference.diagonalDifference(diagonalA2, diagonalB2));
-        int[] diagonalA3 = {1,2,3,6,8,9};
-        int[] diagonalB3 = {9,8,6,3,2,1};
+        int[] diagonalA3 = {1, 2, 3, 6, 8, 9};
+        int[] diagonalB3 = {9, 8, 6, 3, 2, 1};
         Assertions.assertEquals(0, DiagonalDifference.diagonalDifference(diagonalA3, diagonalB3));
 
     }

@@ -19,7 +19,7 @@ public class DiagonalDifference {
         System.out.println();
 
         int diagonalDifference = diagonalDifference(diagonalA, diagonalB);
-        System.out.printf("Diagonal difference: %d%n",diagonalDifference);
+        System.out.printf("Diagonal difference: %d%n", diagonalDifference);
 
         scan.close();
     }
