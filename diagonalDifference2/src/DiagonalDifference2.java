@@ -11,13 +11,13 @@ public class DiagonalDifference2 {
         int[][] matrix;
         matrix = fillMatrix(n);
         System.out.println();
-        int diagonalDifference = diagonalDifference2(matrix, n);
+        int diagonalDifference = diagonalDifference2(matrix);
         System.out.println();
         System.out.println(diagonalDifference);
     }
 
-    static int diagonalDifference2(int[][] matrix, int n) {
-
+    static int diagonalDifference2(int[][] matrix) {
+        int n = matrix.length;
         int difference = 0;
         for (int i = 0; i < n; i++) {
             difference += matrix[i][i];
