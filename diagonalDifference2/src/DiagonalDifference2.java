@@ -11,32 +11,20 @@ public class DiagonalDifference2 {
         int[][] matrix;
         matrix = fillMatrix(n);
         System.out.println();
-        String diagonalDifference = diagonalDifference2(matrix, n);
+        int diagonalDifference = diagonalDifference2(matrix, n);
         System.out.println();
         System.out.println(diagonalDifference);
     }
 
-    private static String diagonalDifference2(int[][] matrix, int n) {
+    static int diagonalDifference2(int[][] matrix, int n) {
 
-        String difference = "";
+        int difference = 0;
         for (int i = 0; i < n; i++) {
-
             difference += matrix[i][i];
-            if (i < n - 1) {
-                difference += "+";
-            } else {
-                difference += " - ";
-            }
         }
-
-        difference += "(";
         for (int i = 0; i < n; i++) {
-            difference += matrix[i][n - 1 - i];
-            if (i < n - 1) {
-                difference += "+";
-            }
+            difference -= matrix[i][n - 1 - i];
         }
-        difference += ")";
         return difference;
     }
 
