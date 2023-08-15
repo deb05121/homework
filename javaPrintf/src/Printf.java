@@ -42,7 +42,9 @@ public class Printf {
         System.out.printf(Locale.US,"%1$tH:%1$tM:%1$tS %1$Tp GMT %1$tz  %n", date);
 
         System.out.printf(Locale.US,"%s %tB %<ta, %<tY%n", "Current date: ", date);
-        System.out.printf("%s %tb %<te, %<ty", "Current date: ", date);
+        System.out.printf("%s %tb %<te, %<ty%n", "Current date: ", date);
+
+        System.out.printf("%1$td.%1$tm.%1$ty %n", date);
 
 
     }
