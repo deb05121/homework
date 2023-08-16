@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Test;
 public class StringSmallExerciseTest {
     @Test
     void testCharCounter(){
-        Assertions.assertEquals(3,StringSmallExercise.countChar("aB_1aB_1aB_1", 'a'));
-        Assertions.assertEquals(3,StringSmallExercise.countChar("aB_1aB_1aB_1", 'B'));
-        Assertions.assertEquals(3,StringSmallExercise.countChar("aB_1aB_1aB_1", '_'));
-        Assertions.assertEquals(3,StringSmallExercise.countChar("aB_1aB_1aB_1", '1'));
+        Assertions.assertEquals(3,StringSmallExercise.countB("aB_1aB_1aB_1"));
+        Assertions.assertEquals(1,StringSmallExercise.countB("leen-NÁJWIB"));
+        Assertions.assertEquals(2,StringSmallExercise.countB("WélaBsnvb545gB"));
+        Assertions.assertEquals(3,StringSmallExercise.countB("BlaBlaBla"));
     }
 
     void testSubStrCounter(){
-        Assertions.assertEquals(3,StringSmallExercise.countSubStr("aB_1aB_1aB_1","aB_1"));
+        Assertions.assertEquals(2,StringSmallExercise.helloCount("helloHalihóHihello"));
     }
 }

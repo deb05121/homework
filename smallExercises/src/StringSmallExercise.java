@@ -1,23 +1,23 @@
 public class StringSmallExercise {
     public static void main(String[] args) {
         String str = "hello_bBffF_hello_G_ddbB_hello";
-        char searchedChar= 'B';
-        byte counterOfChar = countChar(str, searchedChar);
-        String subStr = "hello";
-        byte counterOfSubStr = countSubStr(str, subStr);
+
+        byte counterOfChar = countB(str);
+
+        byte counterOfSubStr = helloCount(str);
         System.out.println(counterOfChar);
         System.out.println(counterOfSubStr);
     }
 
-    static byte countSubStr(String str, String subString) {
+    static byte helloCount(String str) {
         byte presence = 0;
-        int subLength = subString.length();
+        int subLength = 5;
         if (subLength <= str.length()) {
             int i = 0;
             do {
                 String subStr = str.substring(i, i + subLength);
 
-                if (subStr.equals(subString)) {
+                if (subStr.equals("hello")) {
                     presence++;
                 }
                 i++;
@@ -26,11 +26,11 @@ public class StringSmallExercise {
         return presence;
     }
 
-    static byte countChar(String str, char searchedChar) {
+    static byte countB(String str) {
         byte piecesOfChar = 0;
         for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
-            if (c == searchedChar) {
+            if (c == 'B') {
                 piecesOfChar++;
             }
         }
