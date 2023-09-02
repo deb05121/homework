@@ -9,7 +9,7 @@ public class Main {
         Fairy lakeFairy= new Fairy("Lake", CreatureType.WATER, 40);
         Fairy seaFairy= new Fairy("Sea", CreatureType.WATER, 60);
 
-        MythicalCreatures John = new MythicalCreatures();
+        MythicalCreatures John = new Dragon();
 
         orangeDragon.introduce();
         orangeDragon.attack(John);

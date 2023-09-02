@@ -3,10 +3,6 @@ package mythical;
 public class Fairy extends MythicalCreatures {
     int healingPower;
 
-    public Fairy() {
-        super();
-    }
-
     public Fairy(String name, CreatureType type, int power) {
         super(name, type);
         healingPower = power;

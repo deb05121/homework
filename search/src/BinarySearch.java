@@ -20,7 +20,7 @@ public class BinarySearch {
 
     }
 
-    static Integer binarySearcher(int from, int to, int userNumber) {
+    static int binarySearcher(int from, int to, int userNumber) {
         int half = (from + to) / 2;
 
         if ((to - from) >= 0 && index < 0) {

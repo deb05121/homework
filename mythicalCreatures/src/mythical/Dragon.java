@@ -3,7 +3,6 @@ package mythical;
 public class Dragon extends MythicalCreatures {
     int power;
 
-
     public Dragon() {
         super();
     }
@@ -16,7 +15,7 @@ public class Dragon extends MythicalCreatures {
 
     @Override
     void introduce() {
-        System.out.printf("Hello, I am a DRAGON and my name is %s.%n" , name);
+        System.out.printf("Hello, I am a DRAGON and my name is %s.%n", name);
     }
 
     void attack(MythicalCreatures c) {
