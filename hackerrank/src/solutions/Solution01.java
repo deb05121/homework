@@ -1,10 +1,9 @@
-import java.io.*;
+package solutions;
+
 import java.util.*;
-import java.text.*;
-import java.math.*;
 
 
-public class Solution {
+public class Solution01 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

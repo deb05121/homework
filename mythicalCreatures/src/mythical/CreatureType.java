@@ -1,5 +1,5 @@
 package mythical;
 
 public enum CreatureType {
-    FIRE, WATER
+    FIRE, WATER, ICE
 }
