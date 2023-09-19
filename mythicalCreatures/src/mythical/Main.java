@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<MythicalCreature> creaturesList = new ArrayList<MythicalCreature>();
+        ArrayList<MythicalCreature> creaturesList = new ArrayList<>();
 
         Dragon orangeDragon = new Dragon("Orange", CreatureType.FIRE, 25);
         Dragon redDragon = new Dragon("Red", CreatureType.FIRE, 75);
